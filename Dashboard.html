@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIVAPOS v2</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="AdminLTE/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="AdminLTE/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="AdminLTE/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-light navbar-light bg-purple ">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      
+      
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="AdminLTE/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <u1 class="nav navbar-nav">
+            <li id="license_status"></li>
+        </div>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <!-- <a href="index.php?page=logout">
+        <i class="fa fa-sign-out"></i>
+        Keluar
+      </a> -->
+      
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-grey elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" style="width: 24px;">
+      <span class="brand-text font-weight-light">DIVAPOS</span>
+    </a>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="navbar navbar-static-top">
+        <ul class="navbar navbar-static-top nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" >
+          <li class="nav-item">
+            <a href="./dashboard.html" class="nav-link active">
+              <i class="fa fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-desktop"></i>
+              <p>Master
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="barang.html" class="nav-link">
+                  <i class="fa fa-fw fa-cubes"></i>
+                  <p> Barang</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="barcode.html" class="nav-link">
+                  <i class="fa fa-fw fa-barcode"></i>
+                  <p>Barcode</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="supplier.html" class="nav-link">
+                  <i class="fa fa-fw fa-address-card"></i>
+                  <p>Supplier</p>
+                </a>
+              <li class="nav-item">
+                <a href="pelanggan.html" class="nav-link">
+                  <i class="fa fa-fw fa-address-book"></i>
+                  <p>Pelanggan</p>
+                </a>
+                <li class="nav-item">
+                  <a href="stokopname.html" class="nav-link">
+                    <i class="fa fa-fw fa-cube"></i>
+                    <p>Stok Opname</p>
+                  </a>
+                </li>
+              </li>
+            </ul>
+          <li class="nav-item">
+            <a href="kasir.html" class="nav-link">
+              <i class="fa fa-th"></i>
+              <p>Kasir</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-server" aria-hidden="true"></i>
+              <p>Transaksi
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="ion ion-bag"></i>
+              <p>
+                Penjualan 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/login.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Per Periode</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/register.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Per Barang</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+              <li class="nav-item">
+                  <a href="pembelian.html" class="nav-link">
+                    <i class="fa fa-fw fa-shopping-basket"></i>
+                    <p>Pembelian</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="piutang.html" class="nav-link">
+                    <i class="fa fa-fw fa-calendar"></i>
+                    <p>Piutang</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a href="hutang.html" class="nav-link">
+                  <i class="fa fa-calculator"></i>
+                    <p>Hutang </p>
+                </a>
+              </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-sticky-note"></i>
+              <p>
+                Return
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/login.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Penjualan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/register.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pembelian</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-list-alt" aria-hidden="true"></i>
+              <p>Laporan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+                <a href="kas.html" class="nav-link">
+                  <i class="fa fa-book fa-fw"></i>
+                    <p>Kas </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="labarugi.html" class="nav-link">
+                  <i class="fa fa-fax"></i>
+                    <p>Laba rugi </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="grafik.html" class="nav-link">
+                  <i class="ion ion-stats-bars"></i>
+                    <p>Grafik </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="cetak.html" class="nav-link">
+                  <i class="fa fa-print"></i>
+                    <p>Cetak </p>
+                  </a>
+                </li>
+            </li>
+          </ul>
+            <li class="nav-item">
+            <a href="pengguna.html" class="nav-link">
+              <i class="fa fa-user"></i>
+              <p>Pengguna</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pengaturan.html" class="nav-link">
+              <i class="fa fa-cog"></i>
+              <p>Pengaturan</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="hakakses.html" class="nav-link">
+              <i class="fa fa-lock"></i>
+              <p>Hak Akses</p>
+            </a>
+          </li>
+  </nav>                      
+                              </i>
+                              </p>
+                            </a>
+                    </a>
+                  </li>
+                  </li>
+                    
+      </nav>
+      <!-- /.sidebar-menu -->
+      
+    </div>
+    
+    <!-- /.sidebar -->
+    <!-- <b>DIVAPOST RETAIL</b> 
+            <BR>
+            <p>Jl.Panglima Sudirman 56 Tulungagung</p>
+          </div><!-- /.col -->
+          <div class="col-sm-6"> -->
+      
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="small-box">
+        <div style="background-color: #CCCCFF;">
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            
+            <b>DIVAPOST RETAIL</b>
+            <p>Jl.Panglima Sudirman 56 Tulungagung</p>
+          </div><!-- /.col -->
+          <div class="col-sm-10">
+      
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-white">
+              <div class="inner">
+                <p>Penjualan Tahun Ini</p>
+                <h2>Rp.5.548.000</h2>
+              </div> 
+            </div>
+          </div>
+
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-white">
+              <div class="inner">
+                <p>Penjualan Bulan Ini<sup style="font-size: 20px"></sup></p>
+
+                <h2>Rp.5.548.000</h2>
+              </div>
+              
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-white">
+              <div class="inner">
+                <p>Laba Tahun Ini</p>
+                <h2>Rp.2.887.000</h2>
+              </div>
+              </div>
+              </div>
+              <!--./col-->
+              <div class="col-lg-3 col-6">
+                <!--small box-->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Laba Bulan Ini</p>
+                    <h2>Rp.5.548.000</h2> 
+                  </div>
+                  <div class="icon">
+                    <i class=""></i>
+                  </div>
+                </div>
+               </div>
+               <!--./col-->
+               </div>
+
+               <div class="col-md-12">
+                <!-- BAR CHART -->
+                <div class="box box-solid">
+                    <div class="box-header ">
+                      <div class="small-box bg-white">
+                        <div class="inner">
+                        <h1 class="box-title">Grafik Transaksi Tahun 2022</h1>
+    
+                    </div>
+                    <div class="box-body border-radius-none chart-responsive">
+                        <div class="chart" id="bar-chart" style="height: 300px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="300" version="1.1" width="557" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.078125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="42.85546875" y="261" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,261H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="202" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,202H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="143" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,143H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="84" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,84H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,25H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="532" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-09</tspan></text><text x="410.38699202674894" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-07</tspan></text><text x="290.73548418209873" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-05</tspan></text><text x="171.08397633744858" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-03</tspan></text><text x="55.35546875" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-01</tspan></text><path fill="#8583ad" stroke="none" d="M55.35546875,42.77866666666668C70.55709474665638,97.334,100.96034673996914,232.33533333333332,116.16197273662551,261C129.89247363683128,261,157.35347543724282,261,171.08397633744858,261C186.28560233410496,261,216.6888543274177,261,231.89048032407408,261C246.60173128858025,261,276.02423321759255,261,290.73548418209873,261C305.9371101787551,261,336.3403621720679,261,351.5419881687243,261C366.25323913323047,261,395.67574106224276,261,410.38699202674894,261C425.58861802340533,261,455.9918700167181,261,471.1934960133745,261C486.3951220100309,261,516.7983740033436,261,532,261L532,261L55.35546875,261Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#5c599a" d="M55.35546875,42.77866666666668C70.55709474665638,97.334,100.96034673996914,232.33533333333332,116.16197273662551,261C129.89247363683128,261,157.35347543724282,261,171.08397633744858,261C186.28560233410496,261,216.6888543274177,261,231.89048032407408,261C246.60173128858025,261,276.02423321759255,261,290.73548418209873,261C305.9371101787551,261,336.3403621720679,261,351.5419881687243,261C366.25323913323047,261,395.67574106224276,261,410.38699202674894,261C425.58861802340533,261,455.9918700167181,261,471.1934960133745,261C486.3951220100309,261,516.7983740033436,261,532,261" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="55.35546875" cy="42.77866666666668" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="116.16197273662551" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.08397633744858" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="231.89048032407408" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="290.73548418209873" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="351.5419881687243" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="410.38699202674894" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="471.1934960133745" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="532" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 474.266px; top: 193px; display: none;"><div class="morris-hover-row-label">2022-9</div><div class="morris-hover-point" style="color: #5C599A">
+      Penjualan:
+      0
+    </div></div></div>
+                        <p>
+                        </p><div style="background:#5C599A;height:15px;width:30px;float:left ;margin-right:5px;"></div>
+                        penjualan (dalam ribuan)
+                        <p></p>
+                    </div><!-- /.box-body -->
+                    <!-- /.box-body -->
+    
+                </div>
+    
+            </div>
+          
+            <section class="content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+            <div class="box box-solid bg-white">
+              <div class="box-header ">
+                  <h3 class="box-title">Barang Terlaris</h3>
+              </div>
+             </div>
+              <div class="box-body bg-white">
+                  <div style="overflow-y: auto; height:200px; ">
+                      <table class="table">
+                          <thead>
+                              <tr><th>Barang</th>
+                              <th>Terjual</th>
+                          </tr></thead>
+                          <tbody>
+                              <tr>
+                                <td>Luwak white cofee</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <td>Jamu Promil</td>
+                                <td>10</td>
+                              </tr>                            
+                            </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="col-md-4">
+            <div class="box box-solid bg-white">
+                    <div class="box-header ">
+                        <h3 class="box-title">Barang Expired</h3>
+                        
+                    </div>
+                    <div class="box-body bg-white">
+                        <div style="overflow-y: auto; height:200px; ">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Barang</th>
+                                    <th>Expired</th>
+                                </tr></thead>
+                                <tbody>
+                             </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-md-4 bg-white">
+      
+              <div class="box box-solid bg-white">
+                      <div class="box-header ">
+                          <h3 class="box-title">Barang Stok Limit</h3>
+                      </div>
+                      <div class="box-body bg-white">
+                          <div style="overflow-y: auto; height:200px; ">
+                              <table class="table">
+                                  <thead>
+                                      <tr><th>Barang</th>
+                                      <th>Stok</th>
+                                  </tr></thead>
+                                  <tbody>
+                                      <tr><td>Luwak white cofee</td><td>89</td></tr>                            </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+      
+
+       <!-- <div class="col-md-4">
+        <div class="box box-solid">
+                <div class="box-header ">
+                    <h3 class="box-title">Barang Terlaris</h3>
+                </div>
+                <div class="box-body">
+                    <div style="overflow-y: auto; height:300px; ">
+                        <table class="table">
+                            <thead>
+                                <tr><th>Barang</th>
+                                <th>Terjual</th>
+                            </tr></thead>
+                            <tbody>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- ./col -->
+          
+    
+            </div>
+
+                        
+                    </div>
+                </div>
+              
+                                
+                </div>
+
+          </div>
+
+      </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          
+
+ 
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="AdminLTE/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="AdminLTE/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="AdminLTE/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="AdminLTE/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="AdminLTE/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="AdminLTE/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="AdminLTE/plugins/moment/moment.min.js"></script>
+<script src="AdminLTE/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="AdminLTE/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="AdminLTE/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="AdminLTE/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="AdminLTE/dist/js/pages/dashboard.js"></script>
+</body>
+</html>
