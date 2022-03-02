@@ -35,23 +35,71 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-light navbar-light bg-white ">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+      
+      
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
+      
+      
+      <!-- <style>
+        h1,h2,p,a{
+          font-family: sans serif;
+          font-weight: normal;
+        }
+
+        .jam-digital{
+          overflow: hidden;
+          width: 330px;
+          margin: 20px auto;
+          border: 5px solid #efefef;
+        }
+        .kotak{
+          float: left;
+          width: 110px;
+          height: 100px;
+          background-color: #189fff;
+        }
+        .jam-digital-p{
+          color: #fff;
+          font-size: 36px;
+          text-align: center;
+          margin-top: 30px;
+        } -->
+
+      <div class="jam-digital">
+        <div class="kotak">
+          <span id="jam"></span>
+        </div>
+          <div class="kotak">
+            <span id="menit"></span>
+          </div>
+          <div class="kotak">
+            <span id="detik"></span>
+          </div>
+          </div>
+
+          <script>
+            window.setTimeout("waktu()", 1000);
+
+            function waktu(){
+              var waktu = new Date();
+              setTimeout("waktu()", 1000);
+              document.getElementById("jam").innerHTML=waktu.getHours();
+              document.getElementById("menit").innerHTML=waktu.getMinutes();
+              document.getElementById("detik").innerHTML=waktu.getSeconds();
+
+            }
+          </script>
+<!-- Navbar Search -->
+      
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
@@ -73,186 +121,240 @@
         </div>
       </li>
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="AdminLTE/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
+      
+      
       </li>
     </ul>
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-grey elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" style="width: 24px;">
       <span class="brand-text font-weight-light">DIVAPOS</span>
     </a>
+
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
-                <a href="./dashboard.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard</p>
+      <nav class="navbar navbar-static-top">
+        <ul class="navbar navbar-static-top nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" >
+          <li class="nav-item">
+            <a href="./dashboard.html" class="nav-link active">
+              <i class="fa fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-desktop"></i>
+              <p>Master
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="barang.html" class="nav-link">
+                  <i class="fa fa-fw fa-cubes"></i>
+                  <p> Barang</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-chart-pie"></i>
-                  <p>
-                    Master
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
+                <a href="barcode.html" class="nav-link">
+                  <i class="fa fa-fw fa-barcode"></i>
+                  <p>Barcode</p>
                 </a>
-                <ul class="nav nav-treeview" style="display: none;">
-                  <li class="nav-item">
-                    <a href="barang.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Barang</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="barcode.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Barcode</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pelanggan.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Pelanggan</p>
-                    </a>
-                  <li class="nav-item">
-                    <a href="supplier.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Supplier</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
-              
               <li class="nav-item">
-                <a href="kasir.html" class="nav-link">
+                <a href="supplier.html" class="nav-link">
+                  <i class="fa fa-fw fa-address-card"></i>
+                  <p>Supplier</p>
+                </a>
+              <li class="nav-item">
+                <a href="pelanggan.html" class="nav-link">
+                  <i class="fa fa-fw fa-address-book"></i>
+                  <p>Pelanggan</p>
+                </a>
+                <li class="nav-item">
+                  <a href="stokopname.html" class="nav-link">
+                    <i class="fa fa-fw fa-cube"></i>
+                    <p>Stok Opname</p>
+                  </a>
+                </li>
+              </li>
+            </ul>
+          <li class="nav-item">
+            <a href="kasir.html" class="nav-link">
+              <i class="fa fa-th"></i>
+              <p>Kasir</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaksi.html" class="nav-link">
+              <i class="fa fa-server" aria-hidden="true"></i>
+              <p>Transaksi
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="penjualan.html" class="nav-link">
+              <i class="ion ion-bag"></i>
+              <p>
+                Penjualan 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="perperiode.hrml" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Kasir</p>
+                  <p>Per Periode</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="perbarang.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Per Barang</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+              <li class="nav-item">
+                  <a href="pembelian.html" class="nav-link">
+                    <i class="fa fa-fw fa-shopping-basket"></i>
+                    <p>Pembelian</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="piutang.html" class="nav-link">
+                    <i class="fa fa-fw fa-calendar"></i>
+                    <p>Piutang</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a href="hutang.html" class="nav-link">
+                  <i class="fa fa-calculator"></i>
+                    <p>Hutang </p>
+                </a>
+              </li>
+          <li class="nav-item">
+            <a href="return.html" class="nav-link">
+              <i class="fa fa-sticky-note"></i>
+              <p>
+                Return
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="penjualan.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Penjualan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pembelian.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pembelian</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
+        <li class="nav-item">
+            <a href="laporan.html" class="nav-link">
+              <i class="fa fa-list-alt" aria-hidden="true"></i>
+              <p>Laporan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+                <a href="kas.html" class="nav-link">
+                  <i class="fa fa-book fa-fw"></i>
+                    <p>Kas </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="labarugi.html" class="nav-link">
+                  <i class="fa fa-fax"></i>
+                    <p>Laba rugi </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="grafik.html" class="nav-link">
+                  <i class="ion ion-stats-bars"></i>
+                    <p>Grafik </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="cetak.html" class="nav-link">
+                  <i class="fa fa-print"></i>
+                    <p>Cetak </p>
+                  </a>
+                </li>
+            </li>
+          </ul>
+            <li class="nav-item">
+            <a href="pengguna.html" class="nav-link">
+              <i class="fa fa-user"></i>
+              <p>Pengguna</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pengaturan.html" class="nav-link">
+              <i class="fa fa-cog"></i>
+              <p>Pengaturan</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="hakakses.html" class="nav-link">
+              <i class="fa fa-lock"></i>
+              <p>Hak Akses</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fa fa-user"></i>
+              <p>Keluar</p>
+            </a>
+          </li>
+  </nav>                      
+                              </i>
+                              </p>
+                            </a>
+                    </a>
+                  </li>
+                  </li>
+                    
       </nav>
       <!-- /.sidebar-menu -->
+      
     </div>
+    
     <!-- /.sidebar -->
+          <div class="col-sm-6"> -->
+      
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
+      <div class="small-box">
+        <div style="background-color: white;">
+        <div class="row mb-3">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            
+            <b>DIVAPOST RETAIL</b>
+            <p>Jl.Panglima Sudirman 56 Tulungagung</p>
           </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
+          <div class="col-sm-10">
+      
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -266,72 +368,196 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-white">
               <div class="inner">
-                <h3>150</h3>
+                <p>Penjualan Tahun Ini</p>
+                <h2>Rp.5.548.000</h2>
+              </div> 
+            </div>
+          </div>
 
-                <p>New Orders</p>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-white">
+              <div class="inner">
+                <p>Penjualan Bulan Ini<sup style="font-size: 20px"></sup></p>
+
+                <h2>Rp.5.548.000</h2>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-white">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <p>Laba Tahun Ini</p>
+                <h2>Rp.2.887.000</h2>
+              </div>
+              </div>
+              </div>
+              <!--./col-->
+              <div class="col-lg-3 col-6">
+                <!--small box-->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Laba Bulan Ini</p>
+                    <h2>Rp.5.548.000</h2> 
+                  </div>
+                  <div class="icon">
+                    <i class=""></i>
+                  </div>
+                </div>
+               </div>
+               <!--./col-->
+               </div>
 
-                <p>Bounce Rate</p>
+               <div class="col-md-12">
+                <!-- BAR CHART -->
+                <div class="box box-solid">
+                    <div class="box-header ">
+                      <div class="small-box bg-white">
+                        <div class="inner">
+                        <h1 class="box-title">Grafik Transaksi Tahun 2022</h1>
+    
+                    </div>
+                    <div class="box-body border-radius-none chart-responsive">
+                        <div class="chart" id="bar-chart" style="height: 300px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="300" version="1.1" width="557" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.078125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="42.85546875" y="261" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,261H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="202" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,202H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="143" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,143H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="84" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,84H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.85546875" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M55.35546875,25H532" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="532" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-09</tspan></text><text x="410.38699202674894" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-07</tspan></text><text x="290.73548418209873" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-05</tspan></text><text x="171.08397633744858" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-03</tspan></text><text x="55.35546875" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2022-01</tspan></text><path fill="#8583ad" stroke="none" d="M55.35546875,42.77866666666668C70.55709474665638,97.334,100.96034673996914,232.33533333333332,116.16197273662551,261C129.89247363683128,261,157.35347543724282,261,171.08397633744858,261C186.28560233410496,261,216.6888543274177,261,231.89048032407408,261C246.60173128858025,261,276.02423321759255,261,290.73548418209873,261C305.9371101787551,261,336.3403621720679,261,351.5419881687243,261C366.25323913323047,261,395.67574106224276,261,410.38699202674894,261C425.58861802340533,261,455.9918700167181,261,471.1934960133745,261C486.3951220100309,261,516.7983740033436,261,532,261L532,261L55.35546875,261Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#5c599a" d="M55.35546875,42.77866666666668C70.55709474665638,97.334,100.96034673996914,232.33533333333332,116.16197273662551,261C129.89247363683128,261,157.35347543724282,261,171.08397633744858,261C186.28560233410496,261,216.6888543274177,261,231.89048032407408,261C246.60173128858025,261,276.02423321759255,261,290.73548418209873,261C305.9371101787551,261,336.3403621720679,261,351.5419881687243,261C366.25323913323047,261,395.67574106224276,261,410.38699202674894,261C425.58861802340533,261,455.9918700167181,261,471.1934960133745,261C486.3951220100309,261,516.7983740033436,261,532,261" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="55.35546875" cy="42.77866666666668" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="116.16197273662551" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.08397633744858" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="231.89048032407408" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="290.73548418209873" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="351.5419881687243" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="410.38699202674894" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="471.1934960133745" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="532" cy="261" r="4" fill="#5c599a" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 474.266px; top: 193px; display: none;"><div class="morris-hover-row-label">2022-9</div><div class="morris-hover-point" style="color: #5C599A">
+      Penjualan:
+      0
+    </div></div></div>
+                        <p>
+                        </p><div style="background:#5C599A;height:15px;width:30px;float:left ;margin-right:5px;"></div>
+                        penjualan (dalam ribuan)
+                        <p></p>
+                    </div><!-- /.box-body -->
+                    <!-- /.box-body -->
+    
+                </div>
+    
+            </div>
+          
+            <section class="content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+            <div class="box box-solid bg-white">
+              <div class="box-header ">
+                  <h3 class="box-title">Barang Terlaris</h3>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+             </div>
+              <div class="box-body bg-white">
+                  <div style="overflow-y: auto; height:200px; ">
+                      <table class="table">
+                          <thead>
+                              <tr><th>Barang</th>
+                              <th>Terjual</th>
+                          </tr></thead>
+                          <tbody>
+                              <tr>
+                                <td>Luwak white cofee</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <td>Jamu Promil</td>
+                                <td>10</td>
+                              </tr>                            
+                            </tbody>
+                      </table>
+                  </div>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+      
+          <div class="col-md-4">
+            <div class="box box-solid bg-white">
+                    <div class="box-header">
+                        <h3 class="box-title">Barang Expired</h3>
+                  
+                    </div>
+                    <div class="box-body bg-white">
+                        <div style="overflow-y: auto; height:200px; ">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Barang</th>
+                                    <th>Expired</th>
+                                </tr></thead>
+                                <tbody>
+                             </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-md-4">      
+                      <div class="box box-solid bg-white">
+                        <div class="box-header">
+                          <h3 class="box-title">Barang Stok Limit</h3>
+                      </div>
+                      </div>
+                      <div class="box-body bg-white">
+                          <div style="overflow-y: auto; height:200px; ">
+                              <table class="table">
+                                  <thead>
+                                      <tr><th>Barang</th>
+                                      <th>Stok</th>
+                                  </tr></thead>
+                                  <tbody>
+                                      <tr><td>Luwak white coffe</td><td>89</td></tr>                            </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+      
+
+       <!-- <div class="col-md-4">
+        <div class="box box-solid">
+                <div class="box-header ">
+                    <h3 class="box-title">Barang Terlaris</h3>
+                </div>
+                <div class="box-body">
+                    <div style="overflow-y: auto; height:300px; ">
+                        <table class="table">
+                            <thead>
+                                <tr><th>Barang</th>
+                                <th>Terjual</th>
+                            </tr></thead>
+                            <tbody>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+              </div>
+              
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
 
-                <p>User Registrations</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
+          
+    
+            </div>
 
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+                        
+                    </div>
+                </div>
+              
+                                
+                </div>
+
           </div>
-          <!-- ./col -->
-        </div>
+
+      </div>
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
           <!-- Left col -->
           <!-- /.Left col -->
           <!-- right col (We are only adding the ID to make the widgets sortable)-->
-          <section class="col-lg-5 connectedSortable">
+          
 
  
             <!-- /.card -->
@@ -345,10 +571,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0-rc
+    
     </div>
   </footer>
 
